@@ -36,6 +36,7 @@ img{
   display: flex;
   flex-direction: column;
   margin: 0 4rem;
+  width: 50%;
 }
 
 .hidden{
@@ -45,6 +46,11 @@ img{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+.title{
+  text-align: center;
+  font-size: 3rem ;
+}
 
 .previous, .next{
   font-size: 2rem;
