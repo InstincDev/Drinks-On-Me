@@ -60,3 +60,7 @@ img{
 .previous:hover, .next:hover{
   font-weight: 600;
 }
+
+a{
+  cursor: pointer;
+}
