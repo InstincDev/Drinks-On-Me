@@ -26,7 +26,6 @@ function getDrink() {
 
             function nextDrink() {
                 if (i == data.drinks.length-1) {
-                    console.log(i);
                     i = 0;
                     document.querySelector("h2").innerText =
                         data.drinks[i].strDrink;
@@ -34,11 +33,9 @@ function getDrink() {
                         data.drinks[i].strDrinkThumb;
                     document.querySelector("h3").innerText =
                         data.drinks[i].strInstructions;
-
                     i++;
-                    console.log(`next button = ${i}`);
                 } else {
-                    console.log(i);
+
                     i++;
                     document.querySelector("h2").innerText =
                         data.drinks[i].strDrink;
@@ -46,14 +43,11 @@ function getDrink() {
                         data.drinks[i].strDrinkThumb;
                     document.querySelector("h3").innerText =
                         data.drinks[i].strInstructions;
-                        
-                        console.log(`next button = ${i}`);
                 }
             }
 
             function previousDrink() {
                 if (i == 0) {
-                    console.log(i);
                     i = data.drinks.length - 1;
                     document.querySelector("h2").innerText =
                         data.drinks[i].strDrink;
@@ -62,9 +56,7 @@ function getDrink() {
                     document.querySelector("h3").innerText =
                         data.drinks[i].strInstructions;
                     i--;
-                    console.log(`previous button = ${i}`);
                 } else {
-                    console.log(i);
                     i--;
                     document.querySelector("h2").innerText =
                         data.drinks[i].strDrink;
@@ -72,9 +64,6 @@ function getDrink() {
                         data.drinks[i].strDrinkThumb;
                     document.querySelector("h3").innerText =
                         data.drinks[i].strInstructions;
-
-                    
-                    console.log(`previous button = ${i}`);
                 }
             }
         });
