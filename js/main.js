@@ -3,7 +3,7 @@
 document.querySelector("button").addEventListener("click", getDrink);
 
 function getDrink() {
-    let i = 1;
+    let i = 0;
     let drink = document.querySelector("input").value;
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
         .then((res) => res.json())
@@ -22,7 +22,9 @@ function getDrink() {
                 .addEventListener("click", previousDrink);
 
             function nextDrink() {
-                if (i <= data.drinks.length - 1) {
+                if (i == data.drinks.length-1) {
+                    console.log(i);
+                    i = 0;
                     document.querySelector("h2").innerText =
                         data.drinks[i].strDrink;
                     document.querySelector("img").src =
@@ -31,9 +33,46 @@ function getDrink() {
                         data.drinks[i].strInstructions;
 
                     i++;
+                    console.log(`next button = ${i}`);
+                } else {
+                    console.log(i);
+                    i++;
+                    document.querySelector("h2").innerText =
+                        data.drinks[i].strDrink;
+                    document.querySelector("img").src =
+                        data.drinks[i].strDrinkThumb;
+                    document.querySelector("h3").innerText =
+                        data.drinks[i].strInstructions;
+                        
+                        console.log(`next button = ${i}`);
                 }
             }
 
-            function previousDrink() {}
+            function previousDrink() {
+                if (i == 0) {
+                    console.log(i);
+                    i = data.drinks.length - 1;
+                    document.querySelector("h2").innerText =
+                        data.drinks[i].strDrink;
+                    document.querySelector("img").src =
+                        data.drinks[i].strDrinkThumb;
+                    document.querySelector("h3").innerText =
+                        data.drinks[i].strInstructions;
+                    i--;
+                    console.log(`previous button = ${i}`);
+                } else {
+                    console.log(i);
+                    i--;
+                    document.querySelector("h2").innerText =
+                        data.drinks[i].strDrink;
+                    document.querySelector("img").src =
+                        data.drinks[i].strDrinkThumb;
+                    document.querySelector("h3").innerText =
+                        data.drinks[i].strInstructions;
+
+                    
+                    console.log(`previous button = ${i}`);
+                }
+            }
         });
 }
