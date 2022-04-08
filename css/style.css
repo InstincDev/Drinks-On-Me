@@ -1,0 +1,41 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+h2{
+  text-align: center;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.previous, .next{
+  font-size: 2rem;
+  
+}
+
+.previous:hover, .next:hover{
+  font-weight: 600;
+}
