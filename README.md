@@ -20,7 +20,7 @@ https://www.thecocktaildb.com
 
 #### Get item
 
-```http
+```javascript
   GET https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}
 ```
 
