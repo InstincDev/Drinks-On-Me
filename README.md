@@ -5,6 +5,8 @@ Application that allows users to input a type of alcohol and view a carousel of 
 <img width="400" src="https://user-images.githubusercontent.com/67307808/169359313-cf347533-7aab-424c-be56-6b97442c5998.gif"/>
 
 
+https://drinksonme.netlify.app
+
 Each Cocktail includes
 * an image of the drink
 * a list of ingredients
